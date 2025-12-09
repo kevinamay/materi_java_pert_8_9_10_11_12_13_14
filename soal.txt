@@ -1,0 +1,33 @@
+Bagian 1: Constructor Overloading
+1. Tambahkan Constructor Overload: Di dalam kelas Karyawan.java, tambahkan satu constructor baru yang hanya menerima dua parameter: 
+Nama Lengkap (String) dan Tahun Masuk (int).
+Constructor ini harus mengatur NamaLengkap dan ThnMasuk sesuai nilai parameter.
+Untuk atribut Pendidikan dan Status, tetapkan nilai default sebagai: Pendidikan = "SMA" dan Status = "Non-Staf".
+
+2. Uji Constructor Baru: Di dalam kelas DemoKaryawan.java (di bagian main), tambahkan kode untuk membuat objek Karyawan baru, 
+misalnya k3,menggunakan constructor yang baru saja Anda buat.
+Contoh: Karyawan k3 = new Karyawan("Budi Santoso", 2020);
+Tampilkan data lengkap objek k3 (Nama, Pendidikan, Status, Tahun Masuk, Gaji Pokok, dan Tunjangan) untuk memverifikasi hasilnya.
+
+Bagian 2: Method Overloading
+1. Tambahkan Method Overload Ketiga: Di dalam kelas Karyawan.java, tambahkan method ubah ketiga yang menerima tiga parameter: 
+Nama Lengkap (String), Pendidikan (String), dan Status (String).Method ini harus memperbarui ketiga atribut tersebut.
+
+2. Uji Method Overload Ketiga: Di dalam kelas DemoKaryawan.java (di bagian main), gunakan objek k2 yang sudah ada, 
+dan panggil method ubah yang baru Anda buat untuk mengubah status k2 dari "Kontrak" menjadi "Tetap" 
+(sambil mempertahankan Nama dan Pendidikan saat ini).
+Setelah pemanggilan, tampilkan Gaji Pokok baru dari k2 untuk memastikan perubahannya berhasil.
+
+Bagian 3: Pewarisan (Inheritance) dan Access Modifier
+1. Penggunaan Access Modifier:
+Di kelas Karyawan.java, ubah access modifier method HitungMasaKerja(int T) dari protected menjadi public.
+
+2. Penambahan Atribut Private pada Subkelas: Di kelas KaryawanTetap.java, tambahkan atribut baru private double BonusAkhirTahun;
+Implementasi Method Khusus Subkelas:Di kelas KaryawanTetap.java, tambahkan method public double HitungBonus() dengan ketentuan:
+Jika GajiPokok(Status) lebih dari 4,000,000, maka BonusAkhirTahun adalah 20% dari Gaji Pokok.
+Jika Gaji Pokok kurang dari atau sama dengan $4,000,000$, maka BonusAkhirTahun adalah 10% dari Gaji Pokok.
+Method ini harus mengembalikan nilai BonusAkhirTahun
+
+3. Uji Pewarisan dan Method Subkelas: Di kelas DemoKaryawan.java (di bagian main), buat objek baru dari kelas KaryawanTetap, misalnya kt1.
+Pastikan kt1 memiliki data yang valid (misalnya, inisialisasi menggunakan constructor Karyawan atau method ubah yang diwarisi).
+Tampilkan Bonus Akhir Tahun menggunakan method HitungBonus() yang Anda buat untuk objek kt1.
