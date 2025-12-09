@@ -25,7 +25,7 @@ Di kelas Karyawan.java, ubah access modifier method HitungMasaKerja(int T) dari 
 2. Penambahan Atribut Private pada Subkelas: Di kelas KaryawanTetap.java, tambahkan atribut baru private double BonusAkhirTahun;
 Implementasi Method Khusus Subkelas:Di kelas KaryawanTetap.java, tambahkan method public double HitungBonus() dengan ketentuan:
 Jika GajiPokok(Status) lebih dari 4,000,000, maka BonusAkhirTahun adalah 20% dari Gaji Pokok.
-Jika Gaji Pokok kurang dari atau sama dengan $4,000,000$, maka BonusAkhirTahun adalah 10% dari Gaji Pokok.
+Jika Gaji Pokok kurang dari atau sama dengan 4,000,000, maka BonusAkhirTahun adalah 10% dari Gaji Pokok.
 Method ini harus mengembalikan nilai BonusAkhirTahun
 
 3. Uji Pewarisan dan Method Subkelas: Di kelas DemoKaryawan.java (di bagian main), buat objek baru dari kelas KaryawanTetap, misalnya kt1.

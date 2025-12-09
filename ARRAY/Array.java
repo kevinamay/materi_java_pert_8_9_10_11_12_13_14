@@ -1,3 +1,4 @@
+package ARRAY;
 import java.util.Scanner;
 public class Array {
 
@@ -16,12 +17,7 @@ public class Array {
     //    System.out.println("index ke - 4 :"+DeretPositif[4]);
 
     //CONTOH 2
-    // int [] DeretPositif = new int[5];
-    //    DeretPositif [0] =0;
-    //    DeretPositif [1] =10;
-    //    DeretPositif [2] =20;
-    //    DeretPositif [3] =30;
-    //    DeretPositif [4] =40;
+    // int [] DeretPositif = {0,10,20,30,40};
     //    for(int i=0;i<5;i++){
     // System.out.println("index ke - "+i+": "+DeretPositif[i]);}
 
