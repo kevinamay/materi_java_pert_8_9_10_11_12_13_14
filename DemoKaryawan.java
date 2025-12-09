@@ -13,7 +13,6 @@ public class DemoKaryawan {
         k.SetNIP("12345");
         System.out.println(k1.GajiPokok(k1.Status));
         System.out.println(k1.HitungMasaKerja(k1.ThnMasuk));
-
         // Menampilkan data milik objek k1
         System.out.println("Nama Lengkap : " + k1.NamaLengkap);
         System.out.println("Pendidikan : " + k1.Pendidikan);
