@@ -1,0 +1,40 @@
+-- Tahap 1: Kelas Utama (Superclass) - Film.java --
+Buatlah kelas utama bernama Film untuk menyimpan informasi dasar sebuah pemutaran film.
+
+1. Constructor Overloading
+1.1. Tambahkan Constructor Overloading: Di dalam Film.java, tambahkan dua constructor:
+Satu constructor yang menerima tiga parameter: String JudulFilm, String JenisTayangan (misalnya: "2D", "3D"), dan double HargaTiketDasar.
+Satu constructor yang hanya menerima satu parameter: String JudulFilm.
+Pengaturan Default: Constructor yang satu parameter ini harus mengatur JenisTayangan secara default menjadi "2D" dan HargaTiketDasar menjadi 40000.
+1.2. Uji Constructor Baru: Di kelas DemoBioskop.java (di bagian main), buat objek film baru, misalnya filmA, menggunakan constructor satu parameter (hanya judul).
+1.3. Tampilkan Data: Tampilkan data lengkap objek filmA (Judul, Jenis Tayangan, dan Harga Tiket Dasar) untuk memverifikasi nilai default-nya.
+
+2. Method Overloading
+2.1. Tambahkan Method Overload Ketiga: Di dalam Film.java, tambahkan method public double hitungBiaya(int jumlahTiket) yang berfungsi menghitung biaya total (HargaTiketDasar * jumlahTiket).
+2.2. Tambahkan Method Overload Keempat: Tambahkan method overload lain yang bernama hitungBiaya yang menerima dua parameter: int jumlahTiket dan String jenisHari 
+(misalnya: "Weekday", "Weekend").
+Aturan Biaya: Jika jenisHari adalah "Weekend", maka setiap tiket akan dikenakan biaya tambahan 5000. Jika "Weekday", tidak ada biaya tambahan.
+2.3. Uji Method Overload: Gunakan objek filmA yang sudah ada.
+Hitung dan tampilkan total biaya jika memesan 3 tiket untuk hari "Weekday" (menggunakan method hitungBiaya(int, String)).
+Hitung dan tampilkan total biaya jika memesan 3 tiket untuk hari "Weekend" (menggunakan method hitungBiaya(int, String)).
+
+-- Tahap 2: Subkelas (Subclass) - FilmPremiere.java -- 
+Buatlah subkelas bernama FilmPremiere yang mewarisi (extends) dari kelas Film. Kelas ini digunakan khusus untuk film-film di studio premiere yang memiliki biaya dan aturan yang berbeda.
+
+3. Pewarisan, Atribut Private, dan Access Modifier
+3.1. Penambahan Atribut Private: Di kelas FilmPremiere.java, tambahkan atribut private double BiayaLayananPremiere (sebesar 15000 per transaksi).
+3.2. Penyesuaian Access Modifier: Ubah access modifier method getter untuk HargaTiketDasar di Film.java (misalnya menjadi protected double getHargaDasar()) 
+agar dapat diakses oleh subkelas FilmPremiere.
+
+4. Implementasi Khusus Subkelas: Method Overriding
+4.1. Lakukan Method Overriding: Implementasikan secara khusus method public double hitungBiaya(int jumlahTiket) pada kelas FilmPremiere.
+4.2. Ketentuan Perhitungan Biaya Premiere:
+Hitung Total Harga Tiket Dasar (menggunakan super.hitungBiaya(jumlahTiket)).
+Total Biaya Final adalah: Total Harga Tiket Dasar + BiayaLayananPremiere.
+4.3. Uji Pewarisan dan Method Subkelas: Di DemoBioskop.java, buat objek baru dari kelas FilmPremiere, misalnya filmP.
+Inisialisasi filmP (misalnya dengan Judul: "Avengers", Jenis: "3D", Harga: 60000).
+Tampilkan Total Biaya jika memesan 2 tiket film tersebut (menggunakan method hitungBiaya(2) dari FilmPremiere yang sudah di-override).
+(Contoh: 2 tiket * Rp 60.000 = 120.000 + Biaya Layanan Rp 15.000 = Rp 135.000)
+
+-- Tahap 3: Kelas Utama Pengujian - DemoBioskop.java --
+Buatlah kelas DemoBioskop.java yang berisi metode main untuk menguji semua ketentuan dan perhitungan yang diminta pada Soal 1, 2, dan 4.
