@@ -1,0 +1,55 @@
+BAGIAN 1: PEMBUATAN MODEL OBJEK (CLASS)
+1. Class Film (Superclass)
+- Buatlah kelas bernama Film dengan ketentuan:
+  Atribut: String judul, String jenis, double hargaDasar.
+- Constructor Overloading:
+  Film(String judul, String jenis, double harga) -> Mengisi semua atribut.
+  Film(String judul) -> Default jenis = "2D" dan hargaDasar = 40000.
+- Method Overloading (hitungBiaya):
+  double hitungBiaya(int qty) -> Rumus: hargaDasar * qty.
+  double hitungBiaya(int qty, String hari) -> Jika hari adalah "Weekend", ada tambahan Rp 5.000 per tiket.
+
+2. Class FilmPremiere (Subclass)
+- Buatlah kelas FilmPremiere yang merupakan turunan dari Film:
+  Atribut Khusus: private double biayaLayanan = 15000.
+- Method Overriding: * Override method hitungBiaya(int qty).
+  Rumus: (hargaDasar * qty) + biayaLayanan.
+
+3. Class Camilan
+- Buatlah kelas Camilan:
+  Atribut: String namaSnack, double hargaSnack.
+- Constructor: Untuk menginisialisasi nama dan harga.
+
+BAGIAN 2: LOGIKA INTERAKTIF (DEMOBIOSKOP.JAVA)
+Buatlah kelas DemoBioskop dengan public static void main. Implementasikan alur program berikut menggunakan Scanner:
+A. Struktur Utama (Perulangan & Akumulasi)
+- Deklarasikan variabel double totalPendapatanHarian = 0 sebelum perulangan.
+- Bungkus seluruh proses input di bawah ini ke dalam Perulangan Do-While.
+
+B. Pemilihan Menu (Switch-Case)
+- Tampilkan menu utama: 1. Reguler, 2. Premiere, 3. Keluar.
+
+C. Logika Input & Percabangan (If-Else)
+  Jika user memilih menu 1 atau 2:
+- Input Data: Minta user memasukkan Judul Film, Jumlah Tiket, dan Hari (Weekday/Weekend).
+- Opsi Harga: Tanya user: "Input harga manual? (y/n)".
+  Jika 'y': Masukkan harga tiket secara manual.
+  Jika 'n': Gunakan harga default (Reguler: 40.000, Premiere: 60.000).
+- Instansiasi Objek: Buat objek berdasarkan pilihan menu (Jika menu 1 buat objek Film, jika menu 2 buat objek FilmPremiere).
+
+D. Sub-Menu Camilan (Nested Switch-Case)
+  Tanya user: "Beli camilan? (y/n)". Jika 'y', tampilkan pilihan:
+- Popcorn (Rp 35.000)
+- Nachos (Rp 45.000)
+- Soda (Rp 25.000) Simpan pilihan tersebut ke dalam objek Camilan.
+
+E. Perhitungan & Output
+- Hitung Total Bayar per transaksi = Biaya Tiket + Harga Camilan.
+- Akumulasi: Tambahkan Total Bayar ke totalPendapatanHarian.
+- Tampilkan struk kecil (Judul, Jumlah, Total Bayar).
+- Tanya user: "Ada transaksi lagi? (y/n)". Jika 'n', keluar dari loop.
+
+BAGIAN 3: LAPORAN AKHIR
+Setelah perulangan selesai, tampilkan: "PROGRAM SELESAI. TOTAL PENDAPATAN BIOSKOP HARI INI: Rp [totalPendapatanHarian]"
+
+CATATAN : INPUT MENGGUNAKAN LIBRARY JAVA.UTIL.SCANNER 
